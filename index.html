@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div, img{
+    display: inline;
+    vertical-align: middle;
+}
+
+.pseudo{
+    -webkit-animation: mymovepseudo 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymovepseudo 5s infinite;
+}
+
+img.leftaxe {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-animation: mymoveleftaxe 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymoveleftaxe 5s infinite;
+}
+
+img.rightaxe{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-animation: mymoverightaxe 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymoverightaxe 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymoveleftaxe {
+    0% {left: 150px;}
+    100% {left: 0;}
+}
+
+@keyframes mymoveleftaxe {
+    0% {left: 150px;}
+    100% {left: 0;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymoverightaxe {
+    0% {right: 150px;transform: rotate(100deg);}
+    100% {right: 0;}
+}
+
+@keyframes mymoverightaxe {
+    0% {right: 150px;transform: rotate(100deg);}
+    100% {right: 0;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymovepseudo {
+    0% {color: rgba(0, 0, 0, 0.0);}
+    100% {color: rgba(0, 0, 0, 1);}
+}
+
+@keyframes mymovepseudo {
+    0% {color: rgba(0, 0, 0, 0.0);}
+    100% {color: rgba(0, 0, 0, 1);}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<img class="leftaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
+<div class="pseudo">TontonLEric just followed</div>
+<img class="rightaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
+</body>
+</html>
