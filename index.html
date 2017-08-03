@@ -3,61 +3,73 @@
 <head>
 <style> 
 div, img{
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
 }
 
+
 .pseudo{
-    -webkit-animation: mymovepseudo 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymovepseudo 5s infinite;
+    -webkit-animation: mymovepseudo 3s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymovepseudo 3s infinite;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+    text-align: center;
 }
 
 img.leftaxe {
     width: 100px;
     height: 100px;
     position: relative;
-    -webkit-animation: mymoveleftaxe 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymoveleftaxe 5s infinite;
+    
+    -webkit-animation: mymoveleftaxe 3s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymoveleftaxe 3s infinite;
 }
 
 img.rightaxe{
     width: 100px;
     height: 100px;
     position: relative;
-    -webkit-animation: mymoverightaxe 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymoverightaxe 5s infinite;
+    -webkit-animation: mymoverightaxe 3s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymoverightaxe 3s infinite;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymoveleftaxe {
-    0% {left: 150px;}
-    100% {left: 0;}
+    0% {transform: translate(160px) rotateY(180deg);}
+    40% {transform: translate(96px) rotateY(180deg);}
+    100% {transform: rotateY(180deg) rotate(50deg);}
 }
 
 @keyframes mymoveleftaxe {
-    0% {left: 150px;}
-    100% {left: 0;}
+    0% {transform: translate(160px) rotateY(180deg);}
+    40% {transform: translate(96px) rotateY(180deg);}
+    100% {transform: rotateY(180deg) rotate(50deg);}
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymoverightaxe {
-    0% {right: 150px;transform: rotate(100deg);}
-    100% {right: 0;}
+    0% {transform: translate(-160px); }
+    40% {transform: translate(-96px);}
+    100% {transform: rotate(50deg);}
 }
 
 @keyframes mymoverightaxe {
-    0% {right: 150px;transform: rotate(100deg);}
-    100% {right: 0;}
+    0% {transform: translate(-160px);}
+    40% {transform: translate(-96px);}
+    100% {transform: rotate(50deg);}
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymovepseudo {
     0% {color: rgba(0, 0, 0, 0.0);}
+    66% {color: rgba(0, 0, 0, 0.0);}
     100% {color: rgba(0, 0, 0, 1);}
 }
 
 @keyframes mymovepseudo {
     0% {color: rgba(0, 0, 0, 0.0);}
+    66% {color: rgba(0, 0, 0, 0.0);}
     100% {color: rgba(0, 0, 0, 1);}
 }
 
@@ -68,7 +80,7 @@ img.rightaxe{
 <body>
 
 <img class="leftaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
-<div class="pseudo">TontonLEric just followed</div>
+<div class="pseudo">TontonLEric has just subscribed</div>
 <img class="rightaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
 </body>
 </html>
