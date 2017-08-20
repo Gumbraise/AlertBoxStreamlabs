@@ -2,6 +2,15 @@
 <html>
 <head>
 <style> 
+div.container{
+  display:block;
+  position:absolute;
+}
+
+div.container2{
+  top: 40px;
+}
+
 div, img{
     display: inline-block;
     vertical-align: middle;
@@ -9,68 +18,53 @@ div, img{
 
 
 .pseudo{
-    -webkit-animation: mymovepseudo 3s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymovepseudo 3s infinite;
-    max-width: 200px;
-    min-width: 200px;
-    width: 200px;
+    animation: mymovepseudo 4s linear;
+    max-width: 100px;
+    min-width: 100px;
+    width: 100px;
     text-align: center;
+    font-weight:bold;
+    font-size:1.1em;
+    @import url('https://fonts.googleapis.com/css?family=Anton:400,700'); 
+    font-family:'Anton', sans-serif;
+}
+
+.logo{
+  max-width:300px;
 }
 
 img.leftaxe {
     width: 100px;
     height: 100px;
     position: relative;
-    
-    -webkit-animation: mymoveleftaxe 3s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymoveleftaxe 3s infinite;
+    animation: mymoveleftaxe 2.2s linear;
+    transform: rotateY(180deg) rotate(50deg) scale(0.75, 0.75);
 }
 
 img.rightaxe{
     width: 100px;
     height: 100px;
     position: relative;
-    -webkit-animation: mymoverightaxe 3s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymoverightaxe 3s infinite;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymoveleftaxe {
-    0% {transform: translate(160px) rotateY(180deg);}
-    40% {transform: translate(96px) rotateY(180deg);}
-    100% {transform: rotateY(180deg) rotate(50deg);}
+    animation: mymoverightaxe 2.2s linear;
+    transform: rotate(50deg) scale(0.75, 0.75);
 }
 
 @keyframes mymoveleftaxe {
-    0% {transform: translate(160px) rotateY(180deg);}
-    40% {transform: translate(96px) rotateY(180deg);}
-    100% {transform: rotateY(180deg) rotate(50deg);}
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymoverightaxe {
-    0% {transform: translate(-160px); }
-    40% {transform: translate(-96px);}
-    100% {transform: rotate(50deg);}
+    0% {transform: translate(110px) rotateY(180deg) scale(0.75, 0.75);}
+    40% {transform: translate(66px) rotateY(180deg) rotate(50deg) scale(0.75, 0.75);}
+    100% {transform: rotateY(180deg) rotate(50deg) scale(0.75, 0.75);}
 }
 
 @keyframes mymoverightaxe {
-    0% {transform: translate(-160px);}
-    40% {transform: translate(-96px);}
-    100% {transform: rotate(50deg);}
+    0% {transform: translate(-110px) scale(0.75, 0.75);}
+    40% {transform: translate(-66px) rotate(50deg) scale(0.75, 0.75);}
+    100% {transform: rotate(50deg) scale(0.75, 0.75);}
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymovepseudo {
-    0% {color: rgba(0, 0, 0, 0.0);}
-    66% {color: rgba(0, 0, 0, 0.0);}
-    100% {color: rgba(0, 0, 0, 1);}
-}
-
-@keyframes mymovepseudo {
-    0% {color: rgba(0, 0, 0, 0.0);}
-    66% {color: rgba(0, 0, 0, 0.0);}
-    100% {color: rgba(0, 0, 0, 1);}
+@keyframes mymovepseudo {  
+    0% {color: rgba(0, 0, 0, 0.0); }
+    66% {color: rgba(0, 0, 0, 0.0); }
+    100% {color: rgba(0, 0, 0, 1); }
 }
 
 
@@ -79,8 +73,12 @@ img.rightaxe{
 </head>
 <body>
 
-<img class="leftaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
-<div class="pseudo">TontonLEric has just subscribed</div>
+<div class="container">
+  <img class="logo" src="http://uploads.twitchalerts.com/000/090/735/902/GIF_1-3_Sans_Fond.gif"/>
+</div>
+<div class="container container2"><img class="leftaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
+<div class="pseudo">TontonLEric</div>
 <img class="rightaxe" src="https://uploads.twitchalerts.com/000/090/735/902/HACHE.png"/>
+</div>
 </body>
 </html>
